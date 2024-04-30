@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Question-5.css">
+</head>
+<body>
+    <div class="container">
+        <div id="shape"></div>
+        <p id="c">Count=1</p>
+        <div class="buttons">
+            <button id="tap" onclick="tap()">Click</button>
+            <button id="set" onclick="clear()">Reset</button>
+            <button id="clr" onclick="clrChange()">Red</button>
+            <button id="clr-2" onclick="colorChange()">Blue</button>
+        </div>
+    </div>
+
+    <script>
+        var count=0
+        var div=document.getElementById("shape")
+
+        function clrChange(){
+            div.style.backgroundColor="red"
+        }
+
+        function colorChange(){
+            div.style.backgroundColor="blue"
+        }
+
+        function clear(){
+            number=0
+            document.getElementById("c").innerHTML+="number";
+        }
+        function tap(){
+            count++;
+            
+            // var num=0;
+            // num=num+count
+            // var number=document.getElementById("c").value +num
+
+            if(count%2==0){
+                div.style.width="50px"
+                div.style.height="50px"
+            }
+            else if(count%5==0){
+                div.style.width="50px"
+                div.style.height="50px"
+                div.style.borderRadius="50px"
+            }
+            else{
+                div.style.width="120px"
+                div.style.height="50px"
+            }
+            
+
+
+        }
+    </script>
+</body>
+</html>
